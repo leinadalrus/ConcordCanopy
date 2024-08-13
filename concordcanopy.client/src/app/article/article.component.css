@@ -1,0 +1,36 @@
+.jumbotron-header {
+    margin: auto;
+    padding: 1rem;
+    top: 8rem;
+    bottom: 8rem;
+    width: 16rem;
+    height: 11rem;
+    position: relative;
+    background: #ffa07a;
+    border-radius: 49% 63% 38% 64% / 46% 58% 53% 61%;
+    box-shadow: -0.8rem 0.8rem 0.8rem #ff7a5c, inset 0.8rem -0.8rem 1rem #ff7a5c;
+}
+
+.shuriken-box {
+    margin: auto;
+    padding: 1rem;
+    top: 8rem;
+    bottom: 8rem;
+    width: 16rem;
+    height: 11rem;
+    position: relative;
+    background: #ff7a5c;
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.spiral-column {
+    margin: auto;
+    padding: 1rem;
+    top: 8rem;
+    bottom: 8rem;
+    width: 16rem;
+    height: 11rem;
+    position: relative;
+    background: #ff7a5c;
+    border-radius: 10% / 50%;
+}
