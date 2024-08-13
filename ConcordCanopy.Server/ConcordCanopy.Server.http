@@ -1,0 +1,6 @@
+@ConcordCanopy.Server_HostAddress = http://localhost:5147
+
+GET {{ConcordCanopy.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
