@@ -9,18 +9,33 @@
         d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+.manila-folder-chevron-frame {
+  width: 16rem;
+  height: 12rem;
+  border-radius: 2rem;
+  background-color: #F7F3E9;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 1.9rem 3.1rem -0.8rem inset, rgba(0, 0, 0, 0.3) 0 1.1rem 1.2rem -1.1rem inset;
+}
+
 .manila-folder-tabs {
+    padding: 0.7rem 0.3rem;
+    display:block;
+    color: #05040B;
+    background-color: #F7F3E9;
+    box-sizing: border-box;
+    border: 0.1rem solid #05040B;
+    border-radius: 0.7rem;
+    transform: translateY(-0.2rem);
+}
+
+.manila-folder-button-sections {
+  position: relative;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2rem;
-  color: #04030A;
-}
-
-.manila-folder-menu {
-  margin: auto;
-  padding: 4rem;
-}
-
-.manila-folder-chevron-frame {
-  stroke: #04030a;
-  stroke-width: 0.1rem;
+  font-weight: bold;
+  background-color: #F7F3E9;
+  border: none;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  overflow: hidden;
 }

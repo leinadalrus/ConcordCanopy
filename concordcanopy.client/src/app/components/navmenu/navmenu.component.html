@@ -1,10 +1,7 @@
 <nav class="manila-folder-background-chevron">
-  <span class="manila-folder-tabs">
-    <svg class="manila-folder-chevron-frame" viewBox="0 0 640 480" width="440" height="320">
-      <line x1="0" x2="480" y1="320" y2="320" />
-      <line x1="0" x2="320" y1="0" y2="320" />
-      <line x1="320" x2="0" y1="320" y2="0" />
-    </svg>
-    <ng-content select="manila-folder-menu"></ng-content>
-  </span>
+  <div class="manila-folder-chevron-frame">
+    <span class="manila-folder-button-sections">
+      <ng-content select="manila-folder-tabs"></ng-content>
+    </span>
+  </div>
 </nav>
