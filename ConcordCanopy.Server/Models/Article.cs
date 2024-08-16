@@ -2,37 +2,18 @@
 {
     public class Article
     {
-        public Article(UInt16 id, String title, String description, String author)
+        public Int32 Id { get; set; }
+        public String Title { get; set; }
+        public String Description { get; set; }
+        public String Author { get; set; }
+        public DateOnly PublicationDate { get; set; }
+
+        public Article(int id, String title, String description, String author)
         {
-            ID = id;
+            Id = id;
             Title = title;
             Description = description;
             Author = author;
-        }
-
-        UInt16 ID
-        {
-            get; set;
-        }
-
-        String Title
-        {
-            get; set;
-        }
-
-        String Description
-        {
-            get; set;
-        }
-
-        String Author
-        {
-            get; set;
-        }
-
-        DateOnly PublicationDate
-        {
-            get; set;
         }
     }
 }

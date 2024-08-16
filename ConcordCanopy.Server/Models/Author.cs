@@ -2,14 +2,12 @@
 {
     public class Author
     {
+        String Name { get; set; }
+
         public Author(String name)
         {
             Name = name;
         }
 
-        String Name
-        {
-            get; set;
-        }
     }
 }
