@@ -2,7 +2,7 @@
 
 namespace ConcordCanopy.Server.Services
 {
-    public static class ArticleService
+    public class ArticleService
     {
         static List<Article> Articles { get; }
 
@@ -14,34 +14,28 @@ namespace ConcordCanopy.Server.Services
             };
         }
 
-        public static List<Article> GetAll() => Articles;
-        public static Article? Get(int id) => Articles.FirstOrDefault<Article>(d => d.Id == id);
+        static List<Article> GetAll() => Articles;
 
-        public static void Add(Article article)
-        {
-            Articles.Add(article);
-        }
+        static Article? Get(int id) => Articles.FirstOrDefault<Article>(d => d.Id == id);
 
-        public static void Delete(int id)
+        static void Add(Article article) => Articles.Add(article);
+
+        static void Delete(int id)
         {
             var article = Get(id);
 
             if (article is null)
-            {
                 return;
-            }
 
             Articles.Remove(article);
         }
 
-        public static void Update(Article article)
+        static void Update(Article article)
         {
             var n = Articles.FindIndex(d => d.Id == article.Id);
 
             if (n == 1)
-            {
                 return;
-            }
 
             Articles[n] = article;
         }
