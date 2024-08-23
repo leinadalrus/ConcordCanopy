@@ -1,6 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// TODO(Daniel): Add DB Context to Use In Memory Database.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

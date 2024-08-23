@@ -1,1 +1,11 @@
-<app-concave-fill></app-concave-fill>
+<h1>Canopy on Clyde</h1>
+
+<div *ngif="!articles"><em>Loading... Please refresh the page [!]</em></div>
+<!-- TODO(Daniel): Render Card component with "<app-card>" -->
+
+<ul *ngif="articles">
+  <li *ngfor="let article of articles">
+    {{ article.Id }}
+    <!-- TODO(Daniel): Use Angular Service Components to show Component via ID value. -->
+  </li>
+</ul>
