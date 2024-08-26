@@ -4,7 +4,7 @@ namespace ConcordCanopy.Server.Services
 {
     public class CardService
     {
-        static List<Card> Cards { get; }
+        public static List<Card> Cards { get; }
 
         static CardService()
         {
@@ -14,13 +14,13 @@ namespace ConcordCanopy.Server.Services
             };
         }
 
-        static List<Card> GetAll() => Cards;
+        public static List<Card> GetAll() => Cards;
 
-        static Card? Get(int id) => Cards.FirstOrDefault<Card>(d => d.Id == id);
+        public static Card? Get(int id) => Cards.FirstOrDefault<Card>(d => d.Id == id);
 
-        static void Add(Card card) => Cards.Add(card);
+        public static void Add(Card card) => Cards.Add(card);
 
-        static void Delete(int id)
+        public static void Delete(int id)
         {
             var card = Get(id);
 
@@ -30,7 +30,7 @@ namespace ConcordCanopy.Server.Services
             Cards.Remove(card);
         }
 
-        static void Update(Card card)
+        public static void Update(Card card)
         {
             var n = Cards.FindIndex(d => d.Id == card.Id);
 

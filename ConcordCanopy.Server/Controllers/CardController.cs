@@ -1,10 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ConcordCanopy.Server.Data;
+using ConcordCanopy.Server.Models;
+using ConcordCanopy.Server.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ConcordCanopy.Server.Controllers
 {
-    public class CardController : ControllerBase
+    public class CardController : Controller
     {
-        public CardController() { }
+        readonly CardRepository _cardRepository;
+
+        public CardController(CardRepository cardRepository)
+        {
+            _cardRepository = cardRepository;
+        }
 
         [HttpGet("{id}")]
         public ActionResult<Card> Index(int id)
