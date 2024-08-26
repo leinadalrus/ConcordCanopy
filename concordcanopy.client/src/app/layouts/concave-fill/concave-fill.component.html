@@ -1,16 +1,30 @@
 <main class="concave-fill">
   <app-navmenu>
-    <manila-folder-menu>
+    <h4 ngProjectAs="manila-folder-tabs">
       <a href="../../app.component.html">My Clyde Church</a>
       <a href="../../app.component.html">About Us</a>
       <a href="../../app.component.html">Our Contacts</a>
       <a href="../../app.component.html">Learn More?</a>
-    </manila-folder-menu>
+    </h4>
   </app-navmenu>
 
-  <app-card>
-    <card-title>Lorem Ipsum</card-title>
-    <card-body>"Lorem ipsum odor amet, consectetuer adipiscing elit."</card-body>
-  </app-card>
+  <article id="newsletter-media-ulist">
+    <section class="p-6 max-w-sm mx auto bg-black rounded-xl shadow-lg flex items-center space-x-4">
+      <div class="shrink-0">
+        <img class="size-16" src="/public/favicon.ico" />
+      </div>
+      <app-card>
+        <div class="text-xl font-medium text-white">
+          <h3 ngProjectAs="card-title">Lorem Ipsum</h3>
+        </div>
+        <div>
+          <p ngProjectAs="card-description">"Lorem ipsum odor amet, consectetuer adipiscing elit."</p>
+        </div>
 
+        <button class="px-4 py-2 text-sm text-white-600 font-medium rounded border border-black-200 hover:text-white hover:bg-black-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-offset-2">
+          Read more...?
+        </button>
+      </app-card>
+    </section>
+  </article>
 </main>
