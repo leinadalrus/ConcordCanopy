@@ -16,7 +16,7 @@ interface CardArtificer {
   styleUrl: './card.component.css'
 })
 export class CardComponent implements OnInit {
-  public cards: CardArtificer[] = []
+  public artifacts: CardArtificer[] = []
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
 
   getCards() {
     this.http.get<CardArtificer[]>("/cards").subscribe(
-      result => this.cards = result,
+      result => this.artifacts = result,
       error => console.error(error)
     )
   }
