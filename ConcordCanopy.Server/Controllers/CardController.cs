@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConcordCanopy.Server.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class CardController : Controller
     {
         readonly CardRepository _cardRepository;
