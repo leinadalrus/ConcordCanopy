@@ -8,6 +8,7 @@ import { ArticleComponent } from './article/article.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { CardComponent } from './components/card/card.component';
 import { ConcaveFillComponent } from './layouts/concave-fill/concave-fill.component';
+import { NeumorfFrameComponent } from './templates/neumorf-frame/neumorf-frame.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ConcaveFillComponent } from './layouts/concave-fill/concave-fill.compon
     ArticleComponent,
     NavmenuComponent,
     CardComponent,
-    ConcaveFillComponent
+    ConcaveFillComponent,
+    NeumorfFrameComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
