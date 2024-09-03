@@ -1,0 +1,48 @@
+/* Shapes Flavours */
+
+#shapes-flavours-frame {
+    position: absolute;
+    width: 1320px;
+    height: 874px;
+    left: 60px;
+    top: 110px;
+}
+
+/* Ellipse 3 */
+
+#ellipse-main-3 {
+    position: absolute;
+    width: 1081.87px;
+    height: 323.41px;
+    left: 15.12px;
+    top: 104.83px;
+
+    background: #ffa07a;
+}
+
+/* Ellipse 2 */
+
+#ellipse-primary-2 {
+    position: absolute;
+    width: 1020.36px;
+    height: 344.23px;
+    left: 1159.7px;
+    top: 594.65px;
+
+    mix-blend-mode: luminosity;
+    border: 12px solid #87ceeb;
+    transform: rotate(180deg);
+}
+
+/* Ellipse 1 */
+
+#ellipse-secondary-1 {
+    position: absolute;
+    width: 970px;
+    height: 345px;
+    left: 205px;
+    top: 188px;
+
+    mix-blend-mode: luminosity;
+    border: 12px solid #e3dff2;
+}
