@@ -1,11 +1,77 @@
-<h1>Canopy on Clyde</h1>
+<!--  -->
+<!--
+  Welcome to Tailwind Play, the official Tailwind CSS playground!
 
-<div *ngif="!articles"><em>Loading... Please refresh the page [!]</em></div>
-<!-- TODO(Daniel): Render Card component with "<app-card>" -->
+  Everything here works just like it does when you're running Tailwind locally
+  with a real build pipeline. You can customize your config file, use features
+  like `@apply`, or even add third-party plugins.
 
-<ul *ngif="articles">
-  <li *ngfor="let article of articles">
-    {{ article.Id }}
-    <!-- TODO(Daniel): Use Angular Service Components to show Component via ID value. -->
-  </li>
-</ul>
+  Feel free to play with this example if you're just learning, or trash it and
+  start from scratch if you know enough to be dangerous. Have fun!
+
+  https://play.tailwindcss.com/2qqyKgyzgV?size=1200x720
+-->
+<main class="relative flex min-h-screen flex-wrap justify-center overflow-hidden bg-[#F7F3EA] py-6 sm:py-12">
+    <img src="/img/ambient-occlusion.jpg" alt="" class="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+    <nav class="relative bg-[F1E6E9] px-6 pb-8 pt-10 sm:mx-auto sm:px-10">
+      <a class="px-10 font-medium text-[#010204]">Church on Clyde</a>
+      <a class="px-10 font-medium text-[#010204]">About Us</a>
+      <a class="px-10 font-medium text-[#010204]">Our Contacts</a>
+      <a class="px-10 font-medium text-[#010204]">Learn More?</a>
+    </nav>
+    <div class="absolute inset-0 [mask-image:linear-gradient(270deg,slate,rgba(255,255,255,0))]"></div>
+    <div class="relative bg-[#EFEBE2] px-6 pb-8 pt-10 shadow-sm sm:mx-auto sm:max-w-7xl sm:px-10">
+      <div class="mx-auto max-w-md">
+        <img src="/img/logo.svg" class="h-6" alt="Church on Clyde" />
+        <div class="divide-y-2 divide-slate-100">
+          <div class="space-y-6 py-8 text-base leading-8 text-[#010204]">
+
+            <!--  -->
+            <!-- NOTE(Daniel): Article Card: Title -->
+
+            <h1>Hello and Good Morning.</h1>
+
+            <ul class="space-y-8">
+              <li class="flex-wrap-re flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-sky-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 20.247 6-16.5" />
+                  </svg>
+  
+                <p class="ml-4">
+                  Discover a bigger purpose to live for
+                </p>
+              </li>
+  
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-sky-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+  
+                <p class="ml-4">
+                    Helping people find their purpose since 1869
+                </p>
+              </li>
+  
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-sky-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9 20.247 6-16.5" />
+                </svg>
+  
+                <p class="ml-4">Do you love people and share a heart to see lives transformed through the power of the Gospel?</p>
+              </li>
+            </ul>
+
+            <p>Find your purpose now</p>
+          </div>
+          <div class="pt-8 text-base font-semibold leading-7">
+            <a href="https://tailwindcss.com/docs" class="text-[#010204] hover:text-sky-600">
+              Continue reading...?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
