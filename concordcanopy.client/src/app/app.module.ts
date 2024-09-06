@@ -10,6 +10,7 @@ import { CardComponent } from './components/card/card.component';
 import { ConcaveFillComponent } from './layouts/concave-fill/concave-fill.component';
 import { NeumorfFrameComponent } from './templates/neumorf-frame/neumorf-frame.component';
 import { NeusladderComponent } from './templates/neusladder/neusladder.component';
+import { SigninBurstComponent } from './components/signin-burst/signin-burst.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NeusladderComponent } from './templates/neusladder/neusladder.component
     CardComponent,
     ConcaveFillComponent,
     NeumorfFrameComponent,
-    NeusladderComponent
+    NeusladderComponent,
+    SigninBurstComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

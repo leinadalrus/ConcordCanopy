@@ -10,16 +10,16 @@ namespace ConcordCanopy.Server.Controllers
     [Route("[controller]")]
     public class ArticleController : Controller
     {
-        readonly ArticleRepository _articleRepository; // NOTE(Daniel): Should initialise, but it is a "final" readonly member.
+        readonly ArticleData _articleData; // NOTE(Daniel): Should initialise, but it is a "final" readonly member.
         // ArticleRepository _articleRepository = InitArticleRepositoryData(0,
         //     "Lorem Ipsum",
         //     "Lorem ipsum odor amet, consectetuer adipiscing elit.",
         //     "Cicero");
 
         // NOTE(Daniel): Dependency Injection/Composition
-        public ArticleController(ArticleRepository articleRepository)
+        public ArticleController(ArticleData articleData)
         {
-            _articleRepository = articleRepository;
+            _articleData = articleData;
         }
 
         // GET: ArticleController
@@ -31,7 +31,7 @@ namespace ConcordCanopy.Server.Controllers
             if (index is null)
                 return NotFound();
 
-            return View(_articleRepository.Articles.ToList<Article>());
+            return View(_articleData.Articles.ToList<Article>());
         }
 
         [HttpGet]

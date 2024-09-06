@@ -9,11 +9,11 @@ namespace ConcordCanopy.Server.Controllers
     [Route("[controller]")]
     public class CardController : Controller
     {
-        readonly CardRepository _cardRepository;
+        readonly CardData _cardData;
 
-        public CardController(CardRepository cardRepository)
+        public CardController(CardData cardData)
         {
-            _cardRepository = cardRepository;
+            _cardData = cardData;
         }
 
         [HttpGet("{id}")]
@@ -24,7 +24,7 @@ namespace ConcordCanopy.Server.Controllers
             if (index is null)
                 return NotFound();
 
-            return View(_cardRepository.Cards.ToList<Card>());
+            return View(_cardData.Cards.ToList<Card>());
         }
     }
 }
