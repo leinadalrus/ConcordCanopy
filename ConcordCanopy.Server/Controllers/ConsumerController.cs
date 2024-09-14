@@ -8,7 +8,7 @@ namespace ConcordCanopy.Server.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class ConsumerController : Controller
+    public class ConsumerController : ControllerBase
     {
         private ConsumerData _consumerData;
 
@@ -17,13 +17,15 @@ namespace ConcordCanopy.Server.Controllers
             _consumerData = consumerData;
         }
 
-        [HttpGet("{id}")]
-        public IActionResult ConsumerId(Int32? id)
+        [HttpGet("GetConsumer/{id}")]
+        public IEnumerable<Consumer> ConsumerId(Int32? id)
         {
-            if (!id.HasValue)
-                return RedirectToAction("Index");
-
-            return View();
+            return Enumerable.Range(0, 1).Select(x => new Consumer
+            {
+                Id = 0,
+                Nickname = "",
+            })
+            .ToArray();
         }
     }
 }

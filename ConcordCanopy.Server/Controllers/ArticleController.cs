@@ -8,7 +8,7 @@ namespace ConcordCanopy.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ArticleController : Controller
+    public class ArticleController : ControllerBase
     {
         readonly ArticleData _articleData; // NOTE(Daniel): Should initialise, but it is a "final" readonly member.
         // ArticleRepository _articleRepository = InitArticleRepositoryData(0,
@@ -24,14 +24,14 @@ namespace ConcordCanopy.Server.Controllers
 
         // GET: ArticleController
         [HttpGet("{id}")]
-        public ActionResult<Article> Index(int id)
+        public IEnumerable<Article> Index(int id)
         {
             var index = ArticleService.Get(id);
 
             if (index is null)
-                return NotFound();
+                Console.WriteLine("An error has occurred. Index is null.");
 
-            return View(_articleData.Articles.ToList<Article>());
+            return _articleData.Articles.ToList<Article>();
         }
 
         [HttpGet]
@@ -56,12 +56,12 @@ namespace ConcordCanopy.Server.Controllers
 
         // POST: ArticleController/Edit/5
 
-        // PUT: ArticleController/Put
-        [HttpPut("{id}")]
+        // PUT: ArticleController/Put/5
+        [HttpPut("{controller}/Put/{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult Update(Article article, int id)
+        public ActionResult Update(Article article, Int32 id)
         {
             if (id != article.Id)
                 return BadRequest();
@@ -77,8 +77,8 @@ namespace ConcordCanopy.Server.Controllers
         }
 
         // POST: ArticleController/Delete/5
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        [HttpDelete("{controller}/Delete/{id}")]
+        public ActionResult Delete(Int32 id)
         {
             var article = ArticleService.Get(id);
 

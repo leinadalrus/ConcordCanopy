@@ -7,7 +7,7 @@ namespace ConcordCanopy.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CardController : Controller
+    public class CardController : ControllerBase
     {
         readonly CardData _cardData;
 
@@ -17,14 +17,14 @@ namespace ConcordCanopy.Server.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Card> Index(int id)
+        public IEnumerable<Card> Index(int id)
         {
             var index = CardService.Get(id);
 
             if (index is null)
-                return NotFound();
+                Console.WriteLine("An error has occurred. Index has returned null.");
 
-            return View(_cardData.Cards.ToList<Card>());
+            return _cardData.Cards.ToList<Card>();
         }
     }
 }
